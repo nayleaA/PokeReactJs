@@ -29,7 +29,7 @@ if(isloading || !pokemons) {
 return <LoadingScreen/>
 }
 
-const filteredPokemon = pokemons?.slice(0,386).filter((pokemon) =>{
+const filteredPokemon = pokemons?.slice(0,588).filter((pokemon) =>{
   return pokemon.name.toLowerCase().includes(query.toLowerCase());
 });
 
@@ -39,7 +39,7 @@ const filteredPokemon = pokemons?.slice(0,386).filter((pokemon) =>{
       <Header query={query} setQuery={setQuery} />
       <main>
         <nav>
-          {filteredPokemon?.slice(0, 386).map((pokemon) => (
+          {filteredPokemon?.slice(0, 588).map((pokemon) => (
             <Link
               key={pokemon.id}
               className={styles.listItem}
